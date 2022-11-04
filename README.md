@@ -1,4 +1,4 @@
-# Template Description-of-the-Assignment
+# Template Description of the Assignment
 
 Template for the description of assigment for FIIW students @KU Leuven Ghent.
 The usage of the template is by no means mandated.
