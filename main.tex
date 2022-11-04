@@ -9,12 +9,11 @@
  }
  \usepackage{graphicx}
  \usepackage{titling}
+ \usepackage{lipsum}  
+ \usepackage{cmbright}
 
- \title{Advances in Single and Multi-Antenna Technologies for Energy-Efficient IoT
-}
-\author{Gilles Callebaut}
-\date{November 2022}
- 
+
+ %%%%%%%%%%%%% define header/footer %%%%%%%%%%%%%
  \usepackage{fancyhdr}
 \fancypagestyle{plain}{%  the preset of fancyhdr 
     \fancyhf{} % clear all header and footer fields
@@ -23,6 +22,9 @@
     \fancyhead[L]{Description of Assignment}
     \fancyhead[R]{\theauthor}
 }
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%% update \maketitle to show title + student/promotors %%%%%%%%%%%%%
 \makeatletter
 \def\@maketitle{%
   \newpage
@@ -35,21 +37,28 @@
     %{\large \@date}%
   \end{center}%
   \par
-  \vskip 1em}
+  \vskip 1em
+    \noindent\begin{tabular}{@{}ll}
+    Student & \theauthor\\
+     Promotor &  \promotor\\
+     Co-promotors & \copromotor
+    \end{tabular}
+    }
 \makeatother
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\usepackage{lipsum}  
-\usepackage{cmbright}
+
+%%%%%%%%% UPDATE FOLLOWING ITEM %%%%%%%%%%%
+\title{Advances in Single and Multi-Antenna Technologies for Energy-Efficient IoT}
+\author{Gilles Callebaut}
+\date{November 2022}
+\def\promotor{dr. Gilles Callebaut}
+\def\copromotor{ing. Jarne Van Mulders, ing. Guus Leenders}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{document}
 
 \maketitle
-
-\noindent\begin{tabular}{@{}ll}
-    Student & \theauthor\\
-     Promotor &  dr. Gilles Callebaut\\
-     Co-promotors & ing. Jarne Van Mulders, ing. Guus Leenders
-\end{tabular}
 
 \section*{Positioning of the thesis}
 \lipsum[1-2]
@@ -59,7 +68,5 @@
 
 \section*{Plan}
 \lipsum[4-4]
-
-
 
 \end{document}
