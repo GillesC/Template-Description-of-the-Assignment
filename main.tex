@@ -11,6 +11,7 @@
  \usepackage{titling}
  \usepackage{lipsum}  
  \usepackage{cmbright}
+ \usepackage{iflang}
 
 
  %%%%%%%%%%%%% define header/footer %%%%%%%%%%%%%
@@ -19,7 +20,7 @@
     \fancyhf{} % clear all header and footer fields
     \fancyfoot[R]{\includegraphics[width=2cm]{KULEUVEN_GENT_RGB_LOGO.png}}
     \fancyfoot[L]{\thedate}
-    \fancyhead[L]{Description of Assignment}
+    \fancyhead[L]{\iflanguage{english}{Description of Assignment}{Opdrachtomschrijving}}
     \fancyhead[R]{\theauthor}
 }
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -39,7 +40,7 @@
   \par
   \vskip 1em
     \noindent\begin{tabular}{@{}ll}
-    Student & \theauthor\\
+    Student & \theauthor\ (\class)\\
      Promotor &  \promotor\\
      Co-promotors & \copromotor
     \end{tabular}
@@ -54,19 +55,21 @@
 \date{November 2022}
 \def\promotor{dr. Gilles Callebaut}
 \def\copromotor{ing. Jarne Van Mulders, ing. Guus Leenders}
+\def\class{MELICTes}
+\usepackage[english]{babel} % change english or dutch
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{document}
 
 \maketitle
 
-\section*{Positioning of the thesis}
+\section*{\iflanguage{english}{Positioning of the thesis}{Situering van het eindwerk}}
 \lipsum[1-2]
 
-\section*{Objectives}
+\section*{\iflanguage{english}{Objectives}{Doelstellingen}}
 \lipsum[3-3]
 
-\section*{Plan}
+\section*{Planning}
 \lipsum[4-4]
 
 \end{document}
