@@ -17,6 +17,9 @@
  \usepackage{cmbright}
  \usepackage{iflang}
 
+\usepackage[table]{xcolor}
+\newcommand{\instruction}[1]{{\color{blue}{\textbf{Instructions}: {#1}} }}
+
 
  %%%%%%%%%%%%% define header/footer %%%%%%%%%%%%%
  \usepackage{fancyhdr}
@@ -69,16 +72,29 @@
 
 \maketitle
 
+% uncomment below
+\vspace{1em}
+\instruction{
+ This template is without obligation. Feel free to change this template however you like. The description of assignment should, however, include the following:  
+ title, names of the students, promotor and co-promotors, date, sections: positioning of the thesis, objectives and planning.
+    Use prefixes or postfixes to indicate the version or date. In this way, both you and your supervisors have the same naming convention, e.g., \textit{description\_assigment\_20221104.pdf}.
+    Discuss this description with your supervisors. Note: you may have other tasks deadline and for sure your supervisor(s) do. Hence, plan!
+}
+
+
 \section*{\iflanguage{english}{Positioning of the thesis}{Situering van het eindwerk}}
+\instruction{Sketch the context and the problem statement in an appealing manner, such that it can also attract interest from non-experts.}
 
-Use prefixes or postfixes to indicate the version or date. In this way, both you and your supervisors have the same naming convention, e.g., \textit{description\_assigment\_202201104.pdf}.
-
-\lipsum[1-1]
+%\lipsum[1-1]
 
 \section*{\iflanguage{english}{Objectives}{Doelstellingen}}
-\lipsum[3-3]
+\instruction{You formulate a few very concrete objectives you want to realise in your thesis. This can be a list-format.
+The objectives are the initial research questions. These objectives serve as a basis to evaluate the results obtained at the end of your thesis.}
+
+%\lipsum[3-3]
 
 \section*{Planning}
-\lipsum[4-4]
+\instruction{Make a work plan. Divide your work in work packages and define a few key milestones.
+Take into account dependencies between tasks.}
 
 \end{document}
