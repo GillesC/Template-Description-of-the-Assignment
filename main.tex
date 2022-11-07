@@ -16,8 +16,19 @@
  \usepackage{lipsum}  
  \usepackage{cmbright}
  \usepackage{iflang}
-
 \usepackage[table]{xcolor}
+
+
+ \usepackage{pdflscape} % for lanscape Gantt chart
+ \usepackage{pgfgantt}
+ \definecolor{ColorGent}{RGB}{78, 169, 191}
+\definecolor{ColorLeuven}{RGB}{153,	153,255}
+\definecolor{ColorCommon}{RGB}{50,50,50}
+\ganttset{group/.append style={ColorCommon},
+milestone/.append style={red},
+progress label node anchor/.append style={text=red}}
+
+
 \newcommand{\instruction}[1]{{\color{blue}{\textbf{Instructions}: {#1}} }}
 
 
@@ -96,5 +107,11 @@ The objectives are the initial research questions. These objectives serve as a b
 \section*{Planning}
 \instruction{Make a work plan. Divide your work in work packages and define a few key milestones.
 Take into account dependencies between tasks.}
+
+\clearpage
+\begin{landscape}
+    \centering
+    \input{gantt.tex}
+\end{landscape}
 
 \end{document}
